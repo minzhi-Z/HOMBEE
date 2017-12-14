@@ -1,0 +1,88 @@
+*{margin: 0;padding:0;}
+html,body{
+   width: 100%;
+   height: 100%;
+}
+html{
+   font-size: 20px;
+}
+body{
+   position: relative;
+   background:#ccc;
+   background: url(../img/login_bg.jpg) no-repeat;
+}
+section{
+   width: 25rem;
+   height: 17.5rem;
+   border-radius:0.75rem;
+   box-shadow:3px 3px 3px #b0b0b0,-2px -2px 3px #b0b0b0;
+   text-align:center;
+   background:#fff;
+   position:absolute;
+   top: 40%;
+   margin-top:-7.5rem;
+   left: 50%;
+   margin-left: -12.5rem;
+}
+section>h1{
+   font-size:1.4rem;
+   font-weight:550;
+   margin-top: 2rem;
+   margin-bottom:1.5rem;
+   letter-spacing:1px;
+}
+section>input{
+   display: block;
+   margin: 1.25rem auto;
+   width: 13rem;
+   height: 2rem;
+   box-sizing:border-box;
+   line-height:2rem;
+   border:1px solid #888888;
+   outline: none;
+   border-radius: 5px;
+   padding-left: 0.75rem;
+}
+section>button{
+   width: 13rem;
+   height: 2rem;
+   line-height:2rem;
+   border-radius:5px;
+   background:#239DEA;
+   color:#fff;
+   border: none;
+   outline:none;
+   cursor: pointer;
+}
+section>p{
+   width: 13rem;
+   margin: 1.5rem auto;
+   font-size: 0.7rem;
+   color:red;
+   text-align:left;
+   /* ------------如果账号密码错误，此样式为block */
+   display: none;
+}
+
+footer{
+   width: 25rem;
+   text-align:center;
+   padding-bottom:0.75rem;
+   position:absolute;
+   bottom:0;
+   left:50%;
+   margin-left:-12.5rem;
+}
+footer>img{
+   height: 1.25rem;
+}
+footer>h3{
+   margin: 5px;
+   font-size: 0.8rem;
+   font-weight: 500;
+   color:#888888;
+}
+footer>p{
+   font-size: 0.6rem;
+   color:#c7c7c7;
+}

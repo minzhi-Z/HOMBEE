@@ -1,0 +1,134 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+#main{
+   width: 100%;
+   height: 48%;
+   box-sizing: border-box;
+   padding: 1.5rem;
+   /* outline: 1px solid red; */
+   color: #000000;
+   position: relative;
+}
+#main>h3{
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   position: relative;
+   border-bottom: 1px solid #f8f8f8;
+}
+#main>h3>span{
+   display: inline-block;
+   width: 4px;
+   height: 18px;
+   background: #0D97F4;
+   margin-right: 10px;
+}
+#main>h3 img{
+   margin:0 5px;
+}
+#main>p{
+   width: 100%;
+   height: 2rem;
+   line-height: 2rem;
+   font-size: 0.8rem;
+   display: flex;
+   align-items: center;
+   margin-bottom: 0.5rem;
+   /* outline: 1px solid red; */
+}
+#main>p>span{
+   width: 25%;
+}
+#main>p input{
+   width: 10rem;
+   height: 1.5rem;
+   box-sizing: border-box;
+   line-height: 1.5rem;
+   padding-left: 0.5rem;
+   margin: 1rem;
+   border-radius: 6px;
+   outline: none;
+   border: 1px solid #b0b0b0;
+}
+#main>p select{
+   width: 10rem;
+   height: 1.5rem;
+   line-height: 1.5rem;
+   padding-left: 0.5rem;
+   margin: 1rem;
+   border-radius: 6px;
+   outline: none;
+   border: 1px solid #b0b0b0;
+}
+#main>.btn{
+   margin-top: 1rem;
+   position: relative;
+}
+#main>.btn>button{
+   width: 8rem;
+   height: 2rem;
+   border-radius: 6px;
+   outline: none;
+   margin-right: 2rem;
+   border: none;
+   cursor: pointer;
+}
+#main>.btn>.search{
+   background: #039DFF;
+   color: #fff;
+}
+#main>.btn>.reset{
+   background: #DDDFDE;
+   color: #fff;
+}
+#main>.btn>input{
+   width: 9rem;
+   height: 2rem;
+   border:none;
+   outline: none;
+   border-radius: 6px;
+   background: #25DCB0;
+   color: #fff;
+   position: absolute;
+   right: 0;
+   cursor: pointer;
+}
+
+#main>.table{
+   width: 100%;
+   font-size: 0.75rem;
+   margin-top: 1rem;
+}
+#main>.table>p{
+   width: 100%;
+   height: 2.7rem;
+   /* outline: 1px solid green; */
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #f8f8f8;
+}
+#main>.table>.first{
+   background: #F8F8F8;
+}
+#main>.table>p>span{
+   width: 10%;
+   text-align: center;
+}
+#main>.table .span1,#main>.table .span12{
+   width: 5%;
+}
+#main>.table>p a{
+   color:#029dff;
+}
+

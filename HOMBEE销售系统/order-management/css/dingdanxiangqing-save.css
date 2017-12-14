@@ -1,0 +1,226 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+#main{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   padding: 1.5rem;
+   /* outline: 1px solid red; */
+   color: #000000;
+   position: relative;
+   overflow: auto;
+}
+#main>h3{
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   position: relative;
+   border-bottom: 1px solid #f8f8f8;
+}
+#main>h3>span{
+   display: inline-block;
+   width: 4px;
+   height: 18px;
+   background: #0D97F4;
+   margin-right: 10px;
+}
+#main>h3 img{
+   margin:0 5px;
+}
+
+#main>.basic-msg{
+   font-size: 0.75rem;
+   width: 100%;
+}
+#main>div>h4{
+   font-size: 0.85rem;
+   color: #029dff;
+   margin-bottom: 1rem;
+}
+#main>div>p{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin: 0.8rem 0;
+}
+.basic-msg>p i{
+   color: red;
+   margin-right: 3px;
+}
+.basic-msg>.p1>span{
+   width: 20%;
+}
+.basic-msg>.p1>span>span{
+   color: #029dff;
+}
+.basic-msg>.p2>select{
+   width: 40%;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+}
+.basic-msg>.p3>span{
+   width: 30%;
+}
+.basic-msg>.p3 input{
+   width: 12rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+}
+.basic-msg>.p4>span:nth-of-type(1){
+   width: 30%;
+}
+.basic-msg>.p4>span:nth-of-type(1)>input{
+   width: 12rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+}
+.basic-msg>.p4>span:nth-of-type(2)>input{
+   width: 30rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+}
+.basic-msg>.p5 input{
+   width: 50rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+}
+
+#main>.sum-msg{
+   font-size: 0.75rem;
+   width: 100%;
+}
+.sum-msg>p b{
+   font-size: 0.85rem;
+   margin: 0 5px 0 10px;
+   color: #FD7342;
+}
+.sum-msg>p>span{
+   width: 30%;
+}
+.sum-msg>p>span>input{
+   width: 12rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+   margin: 0 8px;
+}
+.sum-msg>p>span>b{
+   margin: 0 10px;
+   color: #FD7342;
+}
+
+#main>.payment-msg{
+   font-size: 0.75rem;
+   width: 100%;
+}
+.payment-msg>p>select{
+   width: 13rem;
+   height: 1.5rem;
+   padding-left: 0.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 6px;
+   margin: 0 8px;
+}
+.payment-msg>p>span{
+   color: #b0b0b0;
+   margin-left: 1rem;
+}
+
+#main>.btn-msg{
+   font-size: 0.8rem;
+   width: 100%;
+   height: 2.5rem;
+   line-height: 2.5rem;
+   background: #F8F8F8;
+   margin-top: 1rem;
+}
+#main>.btn-msg>button{
+   width: 6rem;
+   height: 1.5rem;
+   margin-left: 1rem;
+   border: none;
+   outline: none;
+   border-radius: 4px;
+   color: #fff;
+}
+.btn-msg>.save{
+   background:#21DEB4;
+}
+.btn-msg>.submit{
+   background:#039DFF;
+}
+
+#main>.item-msg{
+   font-size: 0.75rem;
+   width: 100%;
+   margin-top: 1.5rem;
+}
+#main>.item-msg>p{
+   position: relative;
+}
+.item-msg>p>span{
+   position:absolute;
+   right: 2rem;
+}
+.item-msg>.table{
+   width: 100%;
+}
+.item-msg>.table>p{
+   width: 100%;
+   height: 2.5rem;
+   /* outline: 1px solid green; */
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #f8f8f8;
+}
+.item-msg>.table>.first{
+   background:#F8F8F8;
+}
+.item-msg>.table .span1,.item-msg>.table .span2,.item-msg>.table .span3,.item-msg>.table .span7,.item-msg>.table .span8{
+   width: 10%;
+   text-align: center;
+}
+.item-msg>.table .span4,.item-msg>.table .span5,.item-msg>.table .span6{
+   width: 15%;
+   text-align: center;
+}
+.item-msg>.table .span6{
+   width: 20%;
+   text-align: center;
+}
+.item-msg>.table span>input{
+   width: 2.5rem;
+   margin-right: 2px;
+}
+.item-msg>.table span>a{
+   color: #039DFF;
+}
