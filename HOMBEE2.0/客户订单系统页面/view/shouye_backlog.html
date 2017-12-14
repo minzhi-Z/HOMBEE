@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/shouye_backlog.css">
+	<script src="../jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//---点击首页跳转
+			$(".top>.a1").click(function(){
+	        window.location.href="shouye.html"
+	      })
+	      //--点击消息中心刷新
+	      $(".top>.a2").click(function(){
+	        window.location.href="shouye_backlog.html"
+	      })
+		})
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div class="top"><a class="a1">首页</a>><a class="a2">待办事项</a></div>
+		<div class="msgs">
+			<p><span>待办事项</span></p>
+		</div>
+		<div class="backlog">
+			<div class="th">
+        <span class="span1">序号</span>
+        <span class="span2">待办事项</span>
+        <span class="span3">创建时间</span>
+        <span class="span4">操作</span>
+      </div>
+      <div class="td">
+        <span class="span1">1</span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+        <span class="span4"></span>
+      </div>
+      <div class="td">
+        <span class="span1">2</span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+        <span class="span4"></span>
+      </div>
+      <div class="td">
+        <span class="span1">3</span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+        <span class="span4"></span>
+      </div>
+      <div class="td">
+        <span class="span1">4</span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+        <span class="span4"></span>
+      </div>
+		</div>
+
+	</div>
+</body>
+</html>

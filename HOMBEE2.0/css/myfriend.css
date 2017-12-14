@@ -1,0 +1,264 @@
+body{
+	background: #F8F9FA;
+	color: #888888;
+}
+#left,#right{
+	float: left;
+	box-sizing: border-box;
+}
+#left{
+	width: 70%;
+	height: 100%;
+	/*border: 2px solid red;*/
+	position: relative;
+	padding: 0 10px 0 40px;
+	overflow: auto;
+}
+#left .sort{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	position: relative;
+}
+#left .sort .btn{
+	padding: 5px 30px;
+	border-radius: 18px;
+	margin-left: 18px;
+	background: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.btned{
+	color: #ffffff;
+}
+#left .search{
+	width: 260px;
+	position: absolute;
+	right: 0;
+	top: 22px ;
+	height: 36px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #F2F2F2;
+	padding: 0 8px 0 18px;
+	border-radius: 20px;
+}
+#left .search input{
+	background: #F2F2F2;
+	border: none;
+	outline: none;
+	color: #888888;
+}
+#left .search img{
+	width: 30px;
+	height: 30px;
+}
+#left .friends{
+	width: 100%;
+	min-width: 900px;
+}
+#left .friends .item{
+	width: 32%;
+	height: 200px;
+	box-sizing: border-box;
+	padding: 10px 30px 10px 20px;
+	border-radius: 15px;
+	position: relative;
+	background: #ffffff;
+	float: left;
+	margin-left: 1.2%;
+	margin-top: 18px;
+}
+#left .item .msg{
+	width: 100%;
+	height: 120px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #b0b0b0;
+}
+#left .item .friendImg{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 1px solid #b0b0b0;
+}
+#left .item .userMsg p{
+	height: 30px;
+}
+#left .item>div{
+	position: relative;
+}
+#left .item p{
+	width: 100%;
+	height: 68px;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+#left .item .num{
+	font-size: 23px;
+	font-weight: 300;
+	position: absolute;
+	right: 60px;
+}
+#left .item img{
+	position: absolute;
+	top: 0; right: 12px;
+	cursor: pointer;
+}
+#left .item .none{
+	width: 100px;
+	height: 76px;
+	border-radius: 8px;
+	background: #ffffff;
+	border: 1px solid #b0b0b0;
+	position: absolute;
+	right: -10px;
+	top: 45px;
+	text-align: center;
+	display: none;
+}
+#left .none span{
+	display: block;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+
+
+
+
+#right{
+	width: 30%;
+	height: 100%;
+	padding: 0 70px 0 40px;
+	/*border: 2px solid green;*/
+}
+#right h3{
+	font-size: 22px;
+	font-weight: 500;
+	margin: 20px 0;
+}
+#right .friends{
+	width: 100%;
+	box-sizing: border-box;
+	min-width: 330px;
+	border-radius: 15px;
+	background: #ffffff;
+	padding-bottom: 30px;
+}
+#right .friends .item{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	/*outline: 1px solid red;*/
+}
+#right .item>span{
+	width: 30px;
+	text-align: center;
+	margin: 0 18px;
+}
+#right .item .friendImg{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 1px solid #b0b0b0;
+}
+#right .item .friendName{
+	margin: 0 60px 0 18px;
+}
+#right .item .num{
+	font-size: 22px;
+	font-weight: 300;
+	margin-top: 5px;
+}
+#right .one .num{
+	color: #ddb134;
+}
+#right .two .num{
+	color: #a4b4bd;
+}
+#right .three .num{
+	color: #caae8c;
+}
+
+
+/*---------蒙版样式设置*/
+#masking{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,.5);
+	display: none;
+}
+#masking>div{
+	width: 500px;
+	height: 260px;
+	box-sizing: border-box;
+	margin: 350px 0 0 280px;
+	padding: 30px 40px;
+	border-radius: 15px;
+	background: #ffffff;
+	position: relative;
+	text-align: center;
+}
+#masking .title{
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding-bottom: 10px;
+	text-align: left;
+	padding-left: 5px;
+	border-bottom: 1px solid #b0b0b0;
+}
+#masking .msg{
+	margin: 50px 0 50px 0;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+#masking .newname{
+	margin: 40px 0;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#masking .newname input{
+	width: 80%;
+	height: 38px;
+	margin-left: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	padding-left: 10px;
+	background: #ECECEC;
+}
+#masking button{
+	padding:8px 35px;
+	border-radius: 20px;
+	margin: 0 25px;
+	border: none;
+	outline: none;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+#masking .confirm{
+	background: #6ACFED;
+	color: #ffffff;
+}
+#masking .cancel{
+	background: #ECECEC;
+	color: black;
+}
+#masking .close{
+	width: 38px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}

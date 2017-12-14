@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/订单详情-已提交.css">
+	<script src="../jquery/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="top"><a class="a1">订单管理</a>><a href="订单列表.html" class="a2">订单列表</a>><a class="a3" href="订单详情-已提交.html">订单详情</a></div>
+		<div class="basic_msg">
+			<p>基本信息</p>
+			<div class="div1 div">
+				<span>订单编号：<span>EO201709260002</span></span>
+				<span>订单状态：<span>已提交</span></span>
+			</div>
+			<div class="div2 div">
+				<span>订单联系人：苏慧</span>
+				<span>联系人电话：18712341234</span>
+				<span>收货人：苏鹿</span>
+			</div>
+			<div class="div2 div">
+				<span>收货人电话：13712341234</span>
+				<span>期望到货日期：2017/9/25</span>
+			</div>
+			<div class="div4">
+				<span>收货地址：江苏省苏州市工业园区开源路36号丁家宜对面</span>
+			</div>
+			<div class="div5">
+				<span>订单备注：这里展示的是订单的备注内容</span>
+			</div>
+		</div>
+		<div class="sum_msg">
+			<p class="title">金额信息</p>
+			<span>订单销售金额：17500 元</span>
+			<span>预付款金额：7500元</span>
+			<span>尾款金额：1000元</span>
+			<p>订单支付状态：待支付预付款</p>
+		</div>
+		<div class="shangpinliebiao">
+			<p>商品列表</p>
+			<div class="tr">
+				<span class="span1">序号</span>
+				<span class="span2">商品图片</span>
+				<span class="span3">商品编码</span>
+				<span class="span4">商品名称</span>
+				<span class="span5">品牌</span>
+				<span class="span6">商品信息</span>
+				<span class="span7">数量</span>
+				<span class="span8">商品备注</span>
+			</div>
+			<div class="td">
+				<span class="span1">1</span>
+				<span class="span2"></span>
+				<span class="span3">101001100001</span>
+				<span class="span4">电动窗帘电机</span>
+				<span class="span5">智小能家居</span>
+				<span class="span6">型号：CC-320,材质：塑料金属，颜色：白</span>
+				<span class="span7">1个</span>
+				<span class="span8">查看备注</span>
+			</div>
+			<div class="td">
+				<span class="span1">1</span>
+				<span class="span2"></span>
+				<span class="span3">101001100001</span>
+				<span class="span4">控制主机</span>
+				<span class="span5">智小能家居</span>
+				<span class="span6">型号：LL-320,材质：塑料金属，颜色：黑</span>
+				<span class="span7">1个</span>
+				<span class="span8">查看备注</span>
+			</div>
+		</div>
+
+	</div>
+	<div id="mengban">
+		<div>
+			<p class="p1">查看商品备注</p>
+			<p class="p2">这里是商品备注。。。</p>
+			<p class="btn"><button class="close">关闭</button><button class="save">保存</button></p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(".shangpinliebiao>div>.span8").click(function(){
+		$("#mengban").css("display","block")
+	})
+	$("#mengban .close").click(function(){
+		$("#mengban").css("display","none")
+	})
+	$("#mengban .save").click(function(){
+		$("#mengban").css("display","none")
+	})
+</script>
+</html>

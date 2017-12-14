@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/shouye.css">
+  <script src="../jquery/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      //---消息通知查看更多
+      $(".inform>.title>span").click(function(){
+        // $("#iframe",parent.document.body).attr('src','../view/shouye_inform.html')
+        window.location.href="shouye_inform.html"
+      })
+      //---待办事项查看更多
+      $(".backlog>.title>span").click(function(){
+        // $("#iframe",parent.document.body).attr('src','../view/shouye_backlog.html')
+        window.location.href="shouye_backlog.html"
+      })
+      //----点击首页刷新
+      $(".top>.a1").click(function(){
+        window.location.href="shouye.html"
+      })
+      //$("#iframe",parent.document.body).attr('src')
+    })
+  </script>
+</head>
+<body>
+  <div id="main">
+     <div class="top"><a class="a1">首页</a></div>
+     <div class="msgs">
+       <div class="backlog">
+          <p class="title">待办事项<span>查看更多</span></p>
+          <div class="th">
+            <span class="span1">序号</span>
+            <span class="span2">待办事项</span>
+            <span class="span3">创建时间</span>
+            <span class="span4">操作</span>
+          </div>
+          <div class="td">
+            <span class="span1">1</span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+          </div>
+          <div class="td">
+            <span class="span1">2</span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+          </div>
+          <div class="td">
+            <span class="span1">3</span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+          </div>
+          <div class="td">
+            <span class="span1">4</span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+          </div>
+          <div class="td">
+            <span class="span1">5</span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+          </div>
+       </div>
+       <div class="inform">
+          <p class="title">消息通知<span>查看更多</span></p>
+        <div class="th">
+          <span class="span1">序号</span>
+          <span class="span2">待办事项</span>
+          <span class="span3">创建时间</span>
+        </div>
+        <div class="td">
+          <span class="span1">1</span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+        </div>
+        <div class="td">
+          <span class="span1">2</span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+        </div>
+        <div class="td">
+          <span class="span1">3</span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+        </div>
+        <div class="td">
+          <span class="span1">4</span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+        </div>
+        <div class="td">
+          <span class="span1">5</span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+        </div>
+       </div>
+      </div>
+    </div>
+</body>
+</html>

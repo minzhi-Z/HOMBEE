@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>虾付</title>
+    <style type="text/css">
+        body{background: url(login-bg.jpg);}
+        html{font-size: 20px;}
+        .logo{
+            display: block;
+            margin: 0 auto;
+            margin-top: 7.5rem;
+        }
+        .loginMsg{
+            width: 20rem;
+            height: 14rem;
+            box-sizing: border-box;
+            padding:1rem 1.5rem;
+            margin: 1rem auto;
+            background-color:rgba(255,255,255,0.5);
+            border-radius: 0.5rem;
+        }
+        .loginMsg>p{
+            width: 100%;
+            height: 2rem;
+            background: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .loginMsg>p>.left-img{
+            height: 1.5rem;
+            position: absolute;
+            left:8px;
+        }
+        .loginMsg>p>input{
+            width: 70%;
+            height: 90%;
+            border:none;
+            outline: none;
+            position: absolute;
+            left: 2.25rem;
+        }
+        .loginMsg>button{
+            width: 100%;
+            height: 2rem;
+            background: #10AEFF;
+            border:none;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .loginMsg>.triggle{
+            background: none;
+        }
+        .loginMsg>.triggle>a{
+            position: absolute;
+            right: 8px;
+            color: #10AEFF;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .softkeyboard{ display:inline-block;}
+        .softkeyboard td{ padding:4px;}
+        .c_panel{ background-color:rgba(255,255,255,0.5); text-align:center; padding:0.75rem;}
+        .i_button{ border:none; height:2rem; width:2.5rem; font-size:0.8rem; font-family:"微软雅黑"; background-color:rgba(102,152,156,0.8); color:#fff;}
+        .i_button:active{ background-color:#999;}
+        .i_button_num{}
+        .i_button_btn{ float:right; width:4.4rem;background-color: rgba(101,171,136,0.8);}
+        .i_button_bs{ float:right; width:7.4rem;}
+        .i_button_num_bs{ float:right; width:10.5rem;background-color: rgb(139,153,156);}
+    </style>
+</head>
+<body>
+    <img class="logo" src="logo.png">
+    <div class="loginMsg">
+        <p><img class="left-img" src="head.png"><input type="text" placeholder="请输入账号"></p>
+        <p><img class="left-img" src="lock.png"><input type="password" placeholder="请输入密码"></p>
+        <button>登录</button>
+        <p class="triggle"><a href="">使用全键盘</a></p>
+    </div>
+</body>
+</html>
+<script src="soft_keyboard.js"></script>
+<script>
+    //定义当前是否大写的状态
+    window.input_target = '';
+    window.CapsLockValue=0;
+    window.curEditName;
+    window.check;
+    //document.write (' <DIV align=center id=\"softkeyboard\" name=\"softkeyboard\" style=\"position:absolute; left:300px; top:320px; width:517px; z-index:180;display:none\">');
+    document.write (' <DIV class=\"softkeyboard\" id=\"softkeyboard\" name=\"softkeyboard\" style=\"display:none;position: fixed;button:1%;left:50%;margin-left:-150px;z-index: 999\">');
+
+    //document.write (' ------数字----');
+    document.write (' <div class=\"c_panel shuzi\" id="shuzi">');
+
+    document.write ('<table align=\"center\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'7\');\" value=\" 7 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'8\');\" value=\" 8 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'9\');\" value=\" 9 \"></td>');
+    document.write (' <td><input class="i_button i_button_btn i_button_sz" onclick=\"changePanl(\'zimu\');\" type=button value=符号 ></td>');
+    document.write (' </tr>');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'4\');\" value=\" 4 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'5\');\" value=\" 5 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'6\');\" value=\" 6 \"></td>');
+    document.write (' <td><input class="i_button i_button_btn i_button_sz" onclick=\"changePanl(\'zimu\');\" type=button value=字母></td>');
+    document.write (' </tr>');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'1\');\" value=\" 1 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'2\');\" value=\" 2 \"></td>');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'3\');\" value=\" 3 \"></td>');
+    document.write (' <td><input class="i_button i_button_btn" type=button onclick=\"clearValue();\"  value=清空 ></td>');
+    document.write (' </tr>');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_num" type=button onclick=\"addValue(\'0\');\" value=\" 0 \"></td>');
+//    document.write (' <td></td>');
+    document.write (' <td colspan=3><input class="i_button i_button_num_bs" type=button value=\" \u56de\u3000\u9000" onclick=\"backspace();\"></td>');
+    document.write (' </tr>');
+
+    document.write (' </table>');
+
+    document.write ('</DIV>');
+    //document.write ('--------------------------------------------');
+
+
+    //document.write (' ------字母----');
+    document.write (' <div class=\"c_panel zimu\" id=\"zimu\"  style=\"display:none;\">');
+    document.write (' <table align=\"center\" width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'~\');\" value=\" ~ \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'!\');\" value=\" ! \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'@\');\" value=\" @ \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'#\');\" value=\" # \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'$\');\" value=\" $ \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'%\');\" value=\" % \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'^\');\" value=\" ^ \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'*\');\" value=\" * \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'(\');\" value=\" ( \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\')\');\" value=\" ) \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'-\');\" value=\" - \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'+\');\" value=\" + \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'=\');\" value=\" = \"></td>');
+    document.write (' <td><input class="i_button i_button_btn" type=button onclick=\"changePanl(\'shuzi\');\" value=\"切换数字\"></td>');
+    document.write (' </tr>');
+
+    document.write (' <tr> ');
+
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'q\');\" value=\" q \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'w\');\" value=\" w \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'e\');\" value=\" e \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'r\');\" value=\" r \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'t\');\" value=\" t \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'y\');\" value=\" y \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'u\');\" value=\" u \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'i\');\" value=\" i \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'o\');\" value=\" o \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'p\');\" value=\" p \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'[\');\" value=\" [ \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\']\');\" value=\" ] \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'{\');\" value=\" { \"></td>');
+    document.write (' <td><input class="i_button i_button_btn" type=button onClick=\"setCapsLock(this);\" value=\"切换大写\"></td>');
+
+
+    document.write (' </tr>');
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'|\');\" value=\" | \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'a\');\" value=\" a \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'s\');\" value=\" s \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'d\');\" value=\" d \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'f\');\" value=\" f \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'g\');\" value=\" g \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'h\');\" value=\" h \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'j\');\" value=\" j \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'k\');\" value=\" k \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'l\');\" value=\" l \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\';\');\" value=\" ; \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\':\');\" value=\" : \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'}\');\" value=\" } \"></td>');
+    document.write (' <td><input class="i_button i_button_btn" type=button onclick=\"clearValue();\"  value=清空 ></td>');
+    document.write (' </tr>');
+
+    document.write (' <tr> ');
+    document.write (' <td><input class="i_button i_button_fh" type=button onclick=\"addValue(\'_\');\" value=\" _ \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'z\');\" value=\" z \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'x\');\" value=\" x \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'c\');\" value=\" c \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'v\');\" value=\" v \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'b\');\" value=\" b \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'n\');\" value=\" n \"></td>');
+    document.write (' <td><input class="i_button i_button_zm" type=button onclick=\"addValue(\'m\');\" value=\" m \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'<\');\" value=\" < \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'>\');\" value=\" > \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'/\');\" value=\" / \"></td>');
+    document.write (' <td><input class="i_button i_button_fh" type=button onClick=\"addValue(\'?\');\" value=\" ? \"></td>');
+    document.write (' <td colspan=2><input class="i_button i_button_bs" type=button value=\" \u56de\u9000\" onclick=\"backspace();\"></td>');
+    document.write (' </tr>');
+
+    document.write (' </table>');
+    document.write (' </div>');
+    //document.write ('--------------------------------------------');
+    document.write ('</DIV>');
+
+    //给输入的密码框添加新值
+    function addValue(newValue)
+    {
+        if(!input_target)return false;
+        CapsLockValue==0?input_target.val(input_target.val()+ newValue):input_target.val(input_target.val()+ newValue.toUpperCase())
+    }
+    //清空
+    function clearValue()
+    {
+        if(!input_target)return false;
+        input_target.val("");
+    }
+    //实现BackSpace键的功能
+    function backspace()
+    {
+        if(!input_target)return false;
+        var longnum=input_target.val().length;
+        var num ;
+        num=input_target.val().substr(0,longnum-1);
+        input_target.val(num);
+    }
+    function changePanl(oj){
+        //数字键。往后移
+        if(oj=='shuzi'){
+            $('#softkeyboard').css({'left':"50%"})
+        }else if(oj=='zimu'){
+            $('#softkeyboard').css({'left':"35%"})
+        }
+        $("#"+oj).siblings("div").hide();
+        $("#"+oj).show();
+    }
+    //设置是否大写的值
+    function setCapsLock(o)
+    {
+        if (CapsLockValue==0){
+            CapsLockValue=1;
+            $(o).val("转化小写");
+            $.each($(".i_button_zm"),function(b, c) {
+                $(c).val($(c).val().toUpperCase());
+            });
+        }else{
+            CapsLockValue=0;
+            $(o).val("转化大写");
+            $.each($(".i_button_zm"),function(b, c) {
+                $(c).val($(c).val().toLowerCase());
+            });
+        }
+    }
+
+    window.onload=function(){
+//	changePanl("zimu");
+    }
+
+
+    //-----------------字体大小及宽度自适应
+    let oHtml=document.getElementsByTagName('html')[0];
+    oHtml.style.fontSize=(document.body.clientWidth*20/1920)+'px';
+
+    //--------------------------------------切换全键盘
+    let triggleA=document.querySelector(".triggle>a");
+    let softkeyboard=document.getElementById("softkeyboard");
+    triggleA.onclick=function(ev){
+       ev.preventDefault();
+       if(softkeyboard.style.display=='block'){
+        this.innerText="使用全键盘"
+           softkeyboard.style.display="none"
+       }else{
+        this.innerText="关闭全键盘"
+           softkeyboard.style.display="block"
+       }
+   }
+</script>

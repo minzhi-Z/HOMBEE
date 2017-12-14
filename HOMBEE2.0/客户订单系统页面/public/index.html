@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单首页</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="../jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#sidebar>.title').click(function(){
+				$("iframe").attr("src","../view/shouye.html")
+			})
+			$('#sidebar .form_list').click(function(){
+				$("iframe").attr("src","../view/订单列表.html")
+			})
+			$('#sidebar .anomaly').click(function(){
+				$('iframe').attr('src','../view/异常订单.html')
+			})
+			$('#sidebar .updatePass').click(function(){
+				$('iframe').attr('src','../view/修改密码.html')
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="sidebar">
+		<div class="img">客户订单系统</div>
+		<p class="title">首页</p>
+		<ul>订单管理
+			<li class="form_list">订单列表</li>
+			<li class="anomaly">异常单列表</li>
+		</ul>
+		<ul>账号管理
+			<li class="updatePass">修改登录密码</li>
+		</ul>
+	</div>
+	<div id="top">
+		<div class="username">admin(管理员)</div>
+		<button>退出</button>
+	</div>
+	<iframe id="iframe" src="../view/shouye.html"></iframe>
+</body>
+</html>
