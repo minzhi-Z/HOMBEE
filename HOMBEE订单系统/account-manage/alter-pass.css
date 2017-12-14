@@ -1,0 +1,84 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+body{
+   font-size: 0.8rem;
+}
+#inform{
+   width: 100%;
+   height: 48%;
+   box-sizing: border-box;
+   padding: 1.5rem;
+   /* outline: 1px solid red; */
+   color: #000000;
+}
+#inform>h3{
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   position: relative;
+   border-bottom: 1px solid #f8f8f8;
+}
+#inform>h3>span{
+   display: inline-block;
+   width: 4px;
+   height: 18px;
+   background: #837FBC;
+   margin-right: 10px;
+}
+#inform>h3 img{
+   margin:0 5px;
+}
+#inform>h3>a{
+   height: 1.5rem;
+   box-sizing: border-box;
+   position: absolute;
+   color: #837FBC;
+   padding-bottom: 0.4rem;
+   font-size: 0.7rem;
+   bottom: 0;
+   text-decoration: none;
+}
+.underline{
+   border-bottom: 3px solid #837FBC;
+}
+#inform>h3 .a1{
+   right: 6rem;
+}
+#inform>h3 .a2{
+   right: 2rem;
+}
+#inform>p{
+   margin: 1rem 0;
+}
+#inform>p>span{
+   display: inline-block;
+   width: 6rem;
+}
+#inform>p>input{
+   width: 10rem;
+   height: 1.5rem;
+   border: 1px solid #b0b0b0;
+   outline: none;
+   border-radius: 5px;
+}
+#inform>button{
+   width: 8rem;
+   height: 2rem;
+   margin-top: 1rem;
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   color: #fff;
+   background: #21DFB2;
+}

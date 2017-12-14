@@ -1,0 +1,127 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+body{
+   position:relative;
+}
+
+nav{
+   width: 100%;
+   height: 3.5rem;
+   line-height:3.5rem;
+   display: flex;
+   align-items: center;
+   background:#F6F6F6;
+   position: relative;
+   z-index: 999;
+}
+nav>h2{
+   font-size: 1.3rem;
+   font-weight:500;
+   display:flex;
+   align-items: center;
+   margin-left: 2.5rem;
+}
+nav>h2>img{
+   height: 1.4rem;
+   margin-right: 0.5rem;
+}
+nav>.userimg{
+   width: 2.5rem;
+   height: 2.5rem;
+   border: 1px solid #b0b0b0;
+   border-radius:50%;
+   background: url(../img/user_h.png);
+   background-size: cover;
+   position: absolute;
+   right: 11rem;
+}
+nav>.usermsg{
+   width: 5rem;
+   line-height: 1rem;
+   height: 100%;
+   position: absolute;
+   right: 5rem;
+   /* border: 1px solid red; */
+}
+nav>.usermsg>span{
+   display: block;
+   font-size:0.8rem;
+}
+nav .username{
+   margin: 0.6rem 0 0.2rem 0;
+}
+nav .username>img{
+   margin-left: 0.5rem;
+}
+nav .userrank{
+   color:#b0b0b0;
+}
+
+aside{
+   width: 13rem;
+   height: 100%;
+   box-sizing:border-box;
+   margin-top: -3.5rem;
+   padding-top: 5rem;
+   border-right: 1px solid #b0b0b0;
+   color: #000000;
+   font-size: 0.8rem;
+   position: relative;
+   z-index: 998;
+}
+aside>p{
+   width: 80%;
+   height: 2rem;
+   box-sizing: border-box;
+   padding-left: 2rem;
+   line-height:2rem;
+   margin: 1rem auto;
+   border-radius: 5px;
+   background:#F8F8F8;
+   position:relative;
+   cursor: pointer;
+}
+aside>.none1,aside>.none2{
+   text-align: center;
+   width: 80%;
+   height: 2rem;
+   margin: -0.2rem auto 0;
+   display: none;
+}
+aside>div>a{
+   display: block;
+   text-decoration: none;
+   margin: 0.5rem 0;
+   color: #000000;
+}
+.asided{
+   background: #837FBC;
+   color: #fff;
+}
+aside>p>img{
+   position: absolute;
+   right: 1.5rem;
+   top: 40%;
+}
+
+section{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   padding: 3.5rem 0 0 13rem;  
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+section>iframe{
+   width: 99%;
+   height: 99%;
+}

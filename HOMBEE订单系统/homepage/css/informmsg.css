@@ -1,0 +1,80 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+#inform{
+   width: 100%;
+   height: 48%;
+   box-sizing: border-box;
+   padding: 1.5rem;
+   /* outline: 1px solid red; */
+   color: #000000;
+}
+body>div>h3{
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   position: relative;
+   border-bottom: 1px solid #f8f8f8;
+}
+body>div>h3>span{
+   display: inline-block;
+   width: 4px;
+   height: 18px;
+   background: #837FBC;
+   margin-right: 10px;
+}
+body>div>h3 img{
+   margin:0 5px;
+}
+body>div>h3>a{
+   height: 1.5rem;
+   box-sizing: border-box;
+   position: absolute;
+   color: #837FBC;
+   padding-bottom: 0.4rem;
+   font-size: 0.7rem;
+   bottom: 0;
+   text-decoration: none;
+}
+.underline{
+   border-bottom: 3px solid #837FBC;
+}
+body>div>h3 .a1{
+   right: 6rem;
+}
+body>div>h3 .a2{
+   right: 2rem;
+}
+
+#inform>p{
+   width: 100%;
+   height: 2.7rem;
+   line-height: 3rem;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #f8f8f8;
+   font-size: 0.7rem;
+}
+#inform>.first{
+   background: #F8F8F8;
+}
+#inform>p>span{
+   display: inline-block;
+   width: 20%;
+   height: 100%;
+   text-align: center;  
+}
+#inform>p>span:nth-of-type(2){
+   width: 60%;
+}
+

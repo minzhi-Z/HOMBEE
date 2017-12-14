@@ -1,0 +1,96 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+html{font-size: 20px;}
+html,body{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+#main{
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   padding: 1.5rem;
+   /* outline: 1px solid red; */
+   color: #000000;
+   position: relative;
+   overflow: auto;
+}
+#main>h3{
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+   padding-bottom: 0.5rem;
+   position: relative;
+   border-bottom: 1px solid #f8f8f8;
+}
+#main>h3>span{
+   display: inline-block;
+   width: 4px;
+   height: 18px;
+   background: #837FBC;
+   margin-right: 10px;
+}
+#main>h3 img{
+   margin:0 5px;
+}
+
+#main>.basic-msg{
+   font-size: 0.75rem;
+   width: 100%;
+}
+#main>div>h4{
+   font-size: 0.85rem;
+   color: #837FBC;
+   margin-bottom: 1rem;
+}
+#main>div>p{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin: 0.8rem 0;
+}
+.basic-msg>p i{
+   color: red;
+   margin-right: 3px;
+}
+.basic-msg>.p1>span{
+   width: 20%;
+}
+.basic-msg>.p1>span>span{
+   color: #837FBC;
+}
+.basic-msg>.p3>span{
+   width: 30%;
+}
+
+
+#main>.item-msg{
+   width: 100%;
+   margin-top: 2rem;
+   font-size: 0.75rem;
+}
+#main>.item-msg>h4{
+   font-size: 0.85rem;
+   color: #837FBC;
+   margin-bottom: 1rem;
+}
+.item-msg>.table>p{
+   width: 100%;
+   height: 3rem;
+   display: flex;
+   border-bottom: 1px solid #F8F8F8;
+   align-items: center;
+   margin: 0.8rem 0;
+}
+.item-msg>.table>.first{
+   background: #F8F8F8;
+}
+.item-msg>.table>p>span{
+   width: 10%;
+   text-align: center;
+}

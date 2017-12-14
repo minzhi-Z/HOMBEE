@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="../css/indent-list.css">
+   <script src="../js/indent-list.js"></script>
+</head>
+
+<body>
+   <div id="main">
+      <h3>
+         <span></span>订单管理
+         <img src="../../img/arr_right_g.png" alt=""> 订单列表
+      </h3>
+      <p class="p1">
+         <span>订单编码：
+            <input type="text">
+         </span>
+         <span>订单状态：
+            <input type="text">
+         </span>
+         <span>收货是否异常：
+            <input type="text">
+         </span>
+      </p>
+      <div class="btn">
+         <button class="search">搜索</button>
+         <button class="reset">重置</button>
+         <input type="button" value="+新增订单">
+      </div>
+      <div class="table">
+         <p class="first">
+            <span class="span1">序号</span>
+            <span class="span2">订单编码</span>
+            <span class="span3">订单状态</span>
+            <span class="span4">期望到货时间</span>
+            <span class="span5">收货是否异常</span>
+            <span class="span6">创建时间</span>
+            <span class="span7">操作</span>
+         </p>
+         <p>
+            <span class="span1">1</span>
+            <span id="qiyeBM" class="span2">CQ201709000001</span>
+            <span id="qiyeJC" class="span3">已采购</span>
+            <span id="lianxiR" class="span4">2017-12-08<br>12:08:08</span>
+            <span id="lianxiDH" class="span5">否</span>
+            <span id="lianxiDZ" class="span6">2017-12-10<br>12:08:08</span>
+            <span class="span7"><a href="订单详情-已采购.html">详情</a></span>
+         </p>
+         <p>
+            <span class="span1">1</span>
+            <span id="qiyeBM" class="span2">CQ201709000001</span>
+            <span id="qiyeJC" class="span3">已取消</span>
+            <span id="lianxiR" class="span4">2017-12-08<br>12:08:08</span>
+            <span id="lianxiDH" class="span5">否</span>
+            <span id="lianxiDZ" class="span6">2017-12-10<br>12:08:08</span>
+            <span class="span7"><a href="订单详情-已取消.html">详情</a></span>
+         </p>
+         <p>
+            <span class="span1">1</span>
+            <span id="qiyeBM" class="span2">CQ201709000001</span>
+            <span id="qiyeJC" class="span3">选品中</span>
+            <span id="lianxiR" class="span4">2017-12-08<br>12:08:08</span>
+            <span id="lianxiDH" class="span5">否</span>
+            <span id="lianxiDZ" class="span6">2017-12-10<br>12:08:08</span>
+            <span class="span7"><a href="订单详情-选品中.html">详情</a></span>
+         </p>
+         <p>
+            <span class="span1">1</span>
+            <span id="qiyeBM" class="span2">CQ201709000001</span>
+            <span id="qiyeJC" class="span3">选品中</span>
+            <span id="lianxiR" class="span4">2017-12-08<br>12:08:08</span>
+            <span id="lianxiDH" class="span5">否</span>
+            <span id="lianxiDZ" class="span6">2017-12-10<br>12:08:08</span>
+            <span class="span7"><a href="">详情</a></span>
+         </p>
+      </div>
+   </div>
+   <div id="mengban">
+      <div class="msg">
+         <h3>
+            <span></span><b></b>
+            <img class="close" src="../../img/close.png" alt="关闭" >
+         </h3>
+         <p>
+            <span><i>*</i><span>企业简称：</span><input type="text"></span>
+            <span><i>*</i><span>企业客户编码：</span><input type="text"></span>
+            <span><i>*</i><span>联系人：</span><input type="text"></span>
+         </p>
+         <p>
+            <span><i>*</i><span>联系电话：</span><input type="text"></span>
+            <span><i>*</i><span>联系地址：&ensp;&ensp;&ensp;&ensp;</span><input type="text"></span>
+            <span><i>*</i><span>邮件：&ensp;&ensp;</span><input type="text"></span>
+         </p>
+         <p>
+            <span><i>*</i><span>登录账号：</span><input type="text" placeholder="请输入企业客户登录账号"></span>
+            <span><i>*</i><span>登录密码：&ensp;&ensp;&ensp;&ensp;</span><input type="text" placeholder="请输入企业客户登录密码"></span>
+         </p>
+         <p class="texts">&ensp;&ensp;备注：&ensp;&ensp;&ensp;<textarea></textarea></p>
+         <div class="btn">
+            <button class="save">保存</button>
+            <button class="cancel">取消</button>
+         </div>
+      </div>
+      <div class="informMsg">
+         <p>删除提示</p> 
+         <p>是否确认要删除此条信息？</p>
+         <button class="inform">确认</button>
+         <button class="cancel">取消</button>
+      </div>
+   </div>
+</body>
+
+</html>
